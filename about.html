@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Acerca de mí - Nataly Ochoa</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Nataly Ochoa</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="lang-es">Inicio</a><a href="index.html" class="lang-en">Home</a></li>
+        <li><a href="projects.html" class="lang-es">Proyects</a><a href="projects.html" class="lang-en">Projects</a></li>
+        <li><a href="about.html" class="lang-es">Acerca de mí</a><a href="about.html" class="lang-en">About Me</a></li>
+        <li><a href="cv.html" class="lang-es">CV</a><a href="cv.html" class="lang-en">CV</a></li>
+        <li><a href="contact.html" class="lang-es">Contacto</a><a href="contact.html" class="lang-en">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="lang-toggle">
+      <button class="lang-btn" onclick="setLanguage('es')">🇪🇸 Español</button>
+      <button class="lang-btn" onclick="setLanguage('en')">🇬🇧 English</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Versión en español -->
+    <section class="lang-es">
+      <h2>Sobre mí</h2>
+      <p>
+        Soy una desarrolladora Java y programadora Full Stack con enfoque en el backend, experiencia en diversos lenguajes de programación y gestión de bases de datos. A lo largo de mi trayectoria he trabajado con herramientas de planificación y análisis, combinando habilidades técnicas con una visión estratégica.
+      </p>
+      <p>
+        Me destaco por mi capacidad de aprendizaje rápido, trabajo colaborativo y resolución de problemas. Estas habilidades me permiten integrarme fácilmente a equipos de desarrollo, adaptarme a nuevos entornos y contribuir con soluciones eficientes y bien estructuradas.
+      </p>
+      <p>
+        Busco oportunidades donde pueda seguir creciendo como desarrolladora backend, aportar valor a través del código y participar en proyectos que equilibren innovación, tecnología y trabajo en equipo.
+      </p>
+    </section>
+
+    <!-- English version -->
+    <section class="lang-en">
+      <h2>About Me</h2>
+      <p>
+        I’m a Java Developer and Full Stack Programmer focused on backend development, with experience in multiple programming languages and database management. Throughout my journey, I’ve worked with planning and analysis tools, combining technical skills with a strategic mindset.
+      </p>
+      <p>
+        I’m known for my ability to learn quickly, collaborate effectively, and solve problems. These qualities help me integrate into development teams, adapt to new environments, and contribute with efficient and well-structured solutions.
+      </p>
+      <p>
+        I’m seeking opportunities to continue growing as a backend developer, bring value through code, and participate in projects that balance innovation, technology, and teamwork.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p class="lang-es">&copy; 2025 Nataly Ochoa. Todos los derechos reservados.</p>
+    <p class="lang-en">&copy; 2025 Nataly Ochoa. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
