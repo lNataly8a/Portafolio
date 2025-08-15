@@ -1,119 +1,606 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Inicio Portafolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <div class="main-container">
-  <header>
-    <nav class="NavBar">
-      <ul>
-        <li><a href="index.html" class="lang-es">Inicio</a><a href="index.html" class="lang-en">Home</a></li>
-        <li><a href="projects.html" class="lang-es">Proyectos</a><a href="projects.html" class="lang-en">Projects</a></li>
-        <li><a href="about.html" class="lang-es">Acerca de mí</a><a href="about.html" class="lang-en">About Me</a></li>
-        <li><a href="cv.html" class="lang-es">CV</a><a href="cv.html" class="lang-en">CV</a></li>
-        <li><a href="contact.html" class="lang-es">Contacto</a><a href="contact.html" class="lang-en">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="lang-toggle">
-      <button class="lang-btn" onclick="setLanguage('es')">🇪🇸 <span class="lang-es">Español</span><span class="lang-en">Spanish</span></button>
-      <button class="lang-btn" onclick="setLanguage('en')">🇬🇧 <span class="lang-es">Inglés</span><span class="lang-en">English</span></button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio Portafolio</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="particles-js"></div>
+    <div class="main-container">
+      <header>
+        <nav class="NavBar">
+          <ul>
+            <li>
+              <a href="#hero" class="lang-es">Inicio</a
+              ><a href="#hero" class="lang-en">Home</a>
+            </li>
+            <li>
+              <a href="#profile" class="lang-es">Mi Perfil</a
+              ><a href="#profile" class="lang-en">My Profile</a>
+            </li>
+            <li>
+              <a href="#projects" class="lang-es">Proyectos</a
+              ><a href="#projects" class="lang-en">Projects</a>
+            </li>
+            <li>
+              <a href="#contact" class="lang-es">Contacto</a
+              ><a href="#contact" class="lang-en">Contact</a>
+            </li>
+            <li>
+              <a href="cv.html" class="lang-es">CV</a
+              ><a href="cv.html" class="lang-en">CV</a>
+            </li>
+          </ul>
+          <div class="lang-toggle">
+            <button class="lang-btn" onclick="setLanguage('es')">
+              🇪🇸 <span class="lang-es">Español</span
+              ><span class="lang-en">Spanish</span>
+            </button>
+            <button class="lang-btn" onclick="setLanguage('en')">
+              🇬🇧 <span class="lang-es">Inglés</span
+              ><span class="lang-en">English</span>
+            </button>
+          </div>
+        </nav>
+      </header>
+
+      <section id="hero" class="hero-section">
+        <div class="hero-container">
+          <!-- Contenido principal -->
+          <div class="hero-left lang-es">
+            <h1>👋 ¡Hola! Soy Laura Nataly Ochoa Castañeda</h1>
+            <br />
+            <p class="hero-description">
+              Desarrolladora Full Stack Java, con conocimientos en lenguajes de
+              programación, frameworks y lenguajes de consulta. Analista de
+              planificación y uso de herramientas de análisis de datos.
+            </p>
+            <p>
+              Programación Backend | Analista de planificación | Gestión de
+              bases de datos | Java | JavaScript | Python | PHP | SQL | HTML |
+              CSS | LUA | WMS | SRX | JIRA | Power BI
+            </p>
+            <br />
+
+            <div class="skills">
+              <span class="skill-pill">Desarrollo</span>
+              <span class="skill-pill">Análisis de Datos</span>
+              <span class="skill-pill">Planeación</span>
+              <span class="skill-pill">Programación</span>
+            </div>
+
+            <div class="social-links">
+              <a
+                href="https://www.linkedin.com/in/laura-nataly-ochoa-castañeda-9942ab356"
+                target="_blank"
+              >
+                <i class="bi bi-linkedin"></i> LinkedIn
+              </a>
+              <a href="https://github.com/lNataly8a" target="_blank">
+                <i class="bi bi-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-left lang-en">
+            <h1>👋 Hi! I'm Laura Nataly Ochoa Castañeda</h1>
+            <br />
+            <p class="hero-description">
+              Full-stack Java developer with knowledge of programming languages,
+              frameworks, and query languages. Planning analyst and use of data
+              analysis tools.
+            </p>
+            <p>
+              Backend Programming | Planning Analyst | Database Management |
+              Java | JavaScript | Python | PHP | SQL | HTML | CSS | LUA | WMS |
+              SRX | JIRA | Power BI
+            </p>
+            <br />
+
+            <div class="skills">
+              <span class="skill-pill">Developer</span>
+              <span class="skill-pill">Data Analysis</span>
+              <span class="skill-pill">Planning</span>
+              <span class="skill-pill">Programming</span>
+            </div>
+
+            <div class="social-links">
+              <a
+                href="https://www.linkedin.com/in/laura-nataly-ochoa-castañeda-9942ab356"
+                target="_blank"
+              >
+                <i class="bi bi-linkedin"></i> LinkedIn
+              </a>
+              <a href="https://github.com/lNataly8a" target="_blank">
+                <i class="bi bi-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+
+          <!-- Imagen -->
+          <div class="hero-right">
+            <img src="./img/Nataly.png" alt="Nataly Ochoa" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Mi Perfil -->
+      <section id="profile" class="timeline-section lang-es">
+        <h3>Mi Perfil</h3>
+        <div class="card-grid">
+          <div class="card" data-aos="fade-up">
+            <div class="card-header d-flex align-items-center mb-3">
+              <div class="icon-circle me-3">
+                <span class="emoji"><i class="bi bi-person-fill"></i></span>
+              </div>
+              <h3 class="mb-0">Soy Nataly!</h3>
+            </div>
+            <p>
+              Soy una desarrolladora Java y programadora Full Stack con enfoque
+              en el backend, experiencia en diversos lenguajes de programación y
+              gestión de bases de datos.
+            </p>
+          </div>
+
+          <div class="card" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-header d-flex align-items-center mb-3">
+              <div class="icon-circle me-3">
+                <span class="emoji"><i class="bi bi-rocket-takeoff"></i></span>
+              </div>
+              <h3 class="mb-0">Primeros pasos</h3>
+            </div>
+            <p>
+              Comencé con Python y a medida que fuí avanzando, descubrí mi
+              pasión por crear soluciones funcionales y elegantes.
+            </p>
+          </div>
+
+          <div class="card" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-header d-flex align-items-center mb-3">
+              <div class="icon-circle me-3">
+                <span class="emoji"><i class="bi bi-lightbulb-fill"></i></span>
+              </div>
+              <h3 class="mb-0">Lo que me define</h3>
+            </div>
+            <ul>
+              <li>Me destaco por mi capacidad de aprendizaje rápido</li>
+              <li>Trabajo colaborativo y resolución de problemas</li>
+              <li>Me integro y adapto fácilmente a nuevos entornos</li>
+            </ul>
+          </div>
+
+          <div class="card" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-header d-flex align-items-center mb-3">
+              <div class="icon-circle me-3">
+                <span class="emoji"><i class="bi bi-stars"></i></span>
+              </div>
+              <h3 class="mb-0">Mi visión</h3>
+            </div>
+            <p>
+              Busco oportunidades donde pueda seguir creciendo como
+              desarrolladora backend, aportar valor a través del código y
+              participar en proyectos que equilibren innovación y trabajo en
+              equipo.
+            </p>
+          </div>
+        </div>
+        <br />
+        <br />
+
+        <div class="timeline-section" id="experiencia">
+          <h2 class="section-title">Mi Trayectoria</h2>
+          <div class="timeline">
+            <div class="timeline-item left education">
+              <div class="content">
+                <span class="badge-category">🎓 Educación</span>
+                <h3>2025 - Actualidad</h3>
+                <h4>Programa Generation Colombia</h4>
+                <p>
+                  Formación como Desarrolladora Junior Full Stack Java,
+                  fortaleciendo habilidades en programación backend y frontend,
+                  bases de datos y buenas prácticas de desarrollo.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item right work">
+              <div class="content">
+                <span class="badge-category">💼 Experiencia</span>
+                <h3>2024 - 2025</h3>
+                <h4>Falabella</h4>
+                <p>
+                  Encargada de Ingeniería / Analista de Planificación. Gestión
+                  de WMS, PL/SQL, SRX y Jira, optimización de inventario y
+                  análisis de datos en Power BI.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item left education">
+              <div class="content">
+                <span class="badge-category">🎓 Educación</span>
+                <h3>2025 - Actualidad</h3>
+                <h4>Academia BEnglish</h4>
+                <p>
+                  Estudio de inglés certificado, fortaleciendo habilidades de
+                  comunicación y comprensión lectora para un entorno profesional
+                  y técnico.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item right work">
+              <div class="content">
+                <span class="badge-category">💼 Experiencia</span>
+                <h3>2022 - 2023</h3>
+                <h4>GRM – Gestión Documental</h4>
+                <p>
+                  Desarrollo y soporte en prácticas profesionales. Creación de
+                  soluciones con JavaScript y SQL, integración de WebServices y
+                  optimización de consultas para manejo de datos masivos.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item left education">
+              <div class="content">
+                <span class="badge-category">🎓 Educación</span>
+                <h3>2021 - 2023</h3>
+                <h4>SENA</h4>
+                <p>
+                  Tecnólogo en Análisis y Desarrollo de Sistemas de Información.
+                  Fundamentos sólidos en programación, bases de datos y
+                  desarrollo de software.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- My profile -->
+      <section id="profile" class="timeline-section lang-en">
+        <h3>My Profile</h3>
+        <div class="card-grid">
+          <div class="card" data-aos="fade-up">
+            <div class="card-header d-flex align-items-center mb-3">
+              <div class="icon-circle me-3">
+                <span class="emoji"><i class="bi bi-person-fill"></i></span>
+              </div>
+              <h3 class="mb-0">I’m Nataly!</h3>
+            </div>
+            <p>
+              I am a Java developer and Full Stack programmer focused on
+              backend, with experience in various programming languages and
+              database management.
+            </p>
+          </div>
+
+          <div class="card" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-header d-flex align-items-center mb-3">
+              <div class="icon-circle me-3">
+                <span class="emoji"><i class="bi bi-rocket-takeoff"></i></span>
+              </div>
+              <h3 class="mb-0">First steps</h3>
+            </div>
+            <p>
+              I started with Python, and as I progressed, I discovered my
+              passion for creating functional and elegant solutions.
+            </p>
+          </div>
+
+          <div class="card" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-header d-flex align-items-center mb-3">
+              <div class="icon-circle me-3">
+                <span class="emoji"><i class="bi bi-lightbulb-fill"></i></span>
+              </div>
+              <h3 class="mb-0">What defines me</h3>
+            </div>
+            <ul>
+              <li>I stand out for my ability to learn quickly</li>
+              <li>Collaborative work and problem-solving</li>
+              <li>I integrate and adapt easily to new environments</li>
+            </ul>
+          </div>
+
+          <div class="card" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-header d-flex align-items-center mb-3">
+              <div class="icon-circle me-3">
+                <span class="emoji"><i class="bi bi-stars"></i></span>
+              </div>
+              <h3 class="mb-0">My vision</h3>
+            </div>
+            <p>
+              I seek opportunities where I can continue growing as a backend
+              developer, add value through code, and participate in projects
+              that balance innovation and teamwork.
+            </p>
+          </div>
+        </div>
+        <br /><br />
+
+        <div class="timeline-section" id="experiencia">
+          <h2 class="section-title">My Journey</h2>
+          <div class="timeline">
+            <div class="timeline-item left education">
+              <div class="content">
+                <span class="badge-category">🎓 Education</span>
+                <h3>2025 - Present</h3>
+                <h4>Generation Colombia Program</h4>
+                <p>
+                  Training as a Junior Full Stack Java Developer, strengthening
+                  skills in backend and frontend programming, databases, and
+                  development best practices.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item right work">
+              <div class="content">
+                <span class="badge-category">💼 Experience</span>
+                <h3>2024 - 2025</h3>
+                <h4>Falabella</h4>
+                <p>
+                  Engineering Lead / Planning Analyst. Managed WMS, PL/SQL, SRX,
+                  and Jira, optimized inventory, and performed data analysis
+                  using Power BI.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item left education">
+              <div class="content">
+                <span class="badge-category">🎓 Education</span>
+                <h3>2025 - Present</h3>
+                <h4>Academia BEnglish</h4>
+                <p>
+                  Certified English studies, improving communication and reading
+                  comprehension skills for professional and technical
+                  environments.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item right work">
+              <div class="content">
+                <span class="badge-category">💼 Experience</span>
+                <h3>2022 - 2023</h3>
+                <h4>GRM – Document Management</h4>
+                <p>
+                  Development and support during internship. Built solutions
+                  with JavaScript and SQL, integrated WebServices, and optimized
+                  queries for large-scale data management.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item left education">
+              <div class="content">
+                <span class="badge-category">🎓 Education</span>
+                <h3>2021 - 2023</h3>
+                <h4>SENA</h4>
+                <p>
+                  Technologist in Analysis and Development of Information
+                  Systems. Solid foundations in programming, databases, and
+                  software development.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Proyectos -->
+      <section id="projects" class="projects-section lang-es">
+        <h2 class="section-title">Proyectos</h2>
+
+        <div class="carousel-container">
+          <button class="carousel-btn left-btn">&#10094;</button>
+
+          <div class="carousel">
+            <!-- Tarjeta 1 -->
+            <div class="project-card">
+              <img src="./img/BlogHollow.png" alt="Proyecto BlogHollowKnight" />
+              <p>
+                Blog para rendir homenaje a un universo tan rico y cautivador,
+                ofreciendo a otros fans un espacio donde puedan explorar,
+                aprender y compartir experiencias sobre el juego. Este blog es
+                un punto de encuentro para quienes deseen profundizar en los
+                misterios y secretos del mundo de Hallownest.
+              </p>
+              <a
+                href="https://pipealf.github.io/BlogHollowKnight"
+                target="_blank"
+                >Ver Deploy</a
+              >
+            </div>
+            <!-- Tarjeta 2 -->
+            <div class="project-card">
+              <img src="./img/ApiNasa.png" alt="Proyecto API Nasa" />
+              <p>
+                Una aplicación web que consume la API pública "Astronomy Picture
+                of the Day" de la NASA para mostrar diariamente una imagen
+                astronómica junto con su título y descripción, permitiendo al
+                usuario explorar contenido visual del universo de forma sencilla
+                y atractiva.
+              </p>
+              <a href="https://lnataly8a.github.io/Lab-API-Nasa" target="_blank"
+                >View Deploy</a
+              >
+            </div>
+            <!-- Tarjeta 3 -->
+            <div class="project-card">
+              <img src="ruta_imagen3.jpg" alt="Proyecto 3" />
+              <p>Breve descripción del proyecto 3</p>
+              <a href="https://github.com/tuusuario/proyecto3" target="_blank"
+                >Ver Deploy</a
+              >
+            </div>
+            <!-- Tarjeta 4 -->
+            <div class="project-card">
+              <img src="ruta_imagen4.jpg" alt="Proyecto 4" />
+              <p>Breve descripción del proyecto 4</p>
+              <a href="https://github.com/tuusuario/proyecto4" target="_blank"
+                >Ver Deploy</a
+              >
+            </div>
+            <!-- Tarjeta 5 -->
+            <div class="project-card">
+              <img src="ruta_imagen5.jpg" alt="Proyecto 5" />
+              <p>Breve descripción del proyecto 5</p>
+              <a href="https://github.com/tuusuario/proyecto5" target="_blank"
+                >Ver Deploy</a
+              >
+            </div>
+            <!-- Tarjeta 6 -->
+            <div class="project-card">
+              <img src="ruta_imagen6.jpg" alt="Proyecto 6" />
+              <p>Breve descripción del proyecto 6</p>
+              <a href="https://github.com/tuusuario/proyecto6" target="_blank"
+                >Ver Deploy</a
+              >
+            </div>
+          </div>
+
+          <button class="carousel-btn right-btn">&#10095;</button>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="projects-section lang-en">
+        <h2 class="section-title">Projets</h2>
+
+        <div class="carousel-container">
+          <button class="carousel-btn left-btn">&#10094;</button>
+
+          <div class="carousel">
+            <!-- Tarjeta 1 -->
+            <div class="project-card">
+              <img src="./img/BlogHollow.png" alt="Proyecto BlogHollowKnight" />
+              <p>
+                A blog to pay tribute to such a rich and captivating universe,
+                offering other fans a space where they can explore, learn, and
+                share experiences about the game. This blog is a meeting place
+                for those who wish to delve deeper into the mysteries and
+                secrets of the world of Hallownest.
+              </p>
+              <a
+                href="https://pipealf.github.io/BlogHollowKnight"
+                target="_blank"
+                >View Deploy</a
+              >
+            </div>
+            <!-- Tarjeta 2 -->
+            <div class="project-card">
+              <img src="./img/ApiNasa.png" alt="Proyecto API Nasa" />
+              <p>
+                A web application that consumes NASA's public "Astronomy Picture
+                of the Day" API to display a daily astronomical image along with
+                its title and description, allowing the user to explore visual
+                content of the universe in a simple and engaging way.
+              </p>
+              <a href="https://lnataly8a.github.io/Lab-API-Nasa" target="_blank"
+                >View Deploy</a
+              >
+            </div>
+            <!-- Tarjeta 3 -->
+            <div class="project-card">
+              <img src="ruta_imagen3.jpg" alt="Proyecto 3" />
+              <p>Description</p>
+              <a href="https://github.com/tuusuario/proyecto3" target="_blank"
+                >View Deploy</a
+              >
+            </div>
+            <!-- Tarjeta 4 -->
+            <div class="project-card">
+              <img src="ruta_imagen4.jpg" alt="Proyecto 4" />
+              <p>Description</p>
+              <a href="https://github.com/tuusuario/proyecto4" target="_blank"
+                >View Deploy</a
+              >
+            </div>
+            <!-- Tarjeta 5 -->
+            <div class="project-card">
+              <img src="ruta_imagen5.jpg" alt="Proyecto 5" />
+              <p>Description</p>
+              <a href="https://github.com/tuusuario/proyecto5" target="_blank"
+                >View Deploy</a
+              >
+            </div>
+            <!-- Tarjeta 6 -->
+            <div class="project-card">
+              <img src="ruta_imagen6.jpg" alt="Proyecto 6" />
+              <p>Description</p>
+              <a href="https://github.com/tuusuario/proyecto6" target="_blank"
+                >View Deploy</a
+              >
+            </div>
+          </div>
+
+          <button class="carousel-btn right-btn">&#10095;</button>
+        </div>
+      </section>
+
+      <section id="contact" class="lang-es">
+        <h3>Contacto</h3>
+        <p>Correo: lnatalyochoa8@gmail.com</p>
+        <p>
+          GitHub:
+          <a href="https://github.com/lNataly8a" target="_blank">lNataly8a</a>
+        </p>
+        <p>
+          LinkedIn:
+          <a
+            href="https://www.linkedin.com/in/laura-nataly-ochoa-castañeda-9942ab356"
+            target="_blank"
+            >Laura Nataly Ochoa Castañeda</a
+          >
+        </p>
+      </section>
+
+      <section id="contact" class="lang-en">
+        <h3>Contact</h3>
+        <p>Email: lnatalyochoa8@gmail.com</p>
+        <p>
+          GitHub:
+          <a href="https://github.com/lNataly8a" target="_blank">lNataly8a</a>
+        </p>
+        <p>
+          LinkedIn:
+          <a
+            href="https://www.linkedin.com/in/laura-nataly-ochoa-castañeda-9942ab356"
+            target="_blank"
+            >Laura Nataly Ochoa Castañeda</a
+          >
+        </p>
+      </section>
+
+      <footer>
+        <p class="lang-es">
+          &copy; 2025 Nataly Ochoa. Todos los derechos reservados.
+        </p>
+        <p class="lang-en">&copy; 2025 Nataly Ochoa. All rights reserved.</p>
+      </footer>
     </div>
-  </header>
-
-  <main>
-<section class="lang-es">
- <div id="sobre-mi" class="about-section">
-  <div class="about-container">
-    <img src="GatoFoto.jpg" alt="Foto de Nataly" class="about-img" />
-
-    <div class="about-info">
-      <h3>Laura Nataly Ochoa Castañeda</h3>
-      <p>
-        Desarrolladora Full Stack Java, con conocimientos en lenguajes de programación, frameworks y lenguajes de consulta. Analista de planificación y uso de herramientas de análisis de datos.
-      </p>
-
-      <div class="skills">
-        <span class="skill-pill">Desarrollo</span>
-        <span class="skill-pill">Analisis de Datos</span>
-        <span class="skill-pill">Planeación</span>
-        <span class="skill-pill">Programación</span>
-      </div>
-
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/laura-nataly-ochoa-castañeda-9942ab356" target="_blank">
-          <i class="bi bi-linkedin"></i> LinkedIn
-        </a>
-        <a href="https://github.com/lNataly8a" target="_blank">
-          <i class="bi bi-github"></i> GitHub
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-  <h2>Bienvenidos!</h2>
-  <p>Desarrolladora Full Stack Java | Programación Backend | Analista de planificación | Gestión de bases de datos | Java | JavaScript | Python | PHP | SQL | HTML | CSS | LUA | WMS | SRX | JIRA | Power BI</p>
-</section>
-
-    <section class="lang-en">
-       <div id="sobre-mi" class="about-section">
-  <div class="about-container">
-    <img src="GatoFoto.jpg" alt="Foto de Nataly" class="about-img" />
-
-    <div class="about-info">
-      <h3>Laura Nataly Ochoa Castañeda</h3>
-      <p>
-      Full-stack Java developer with knowledge of programming languages, frameworks, and query languages. Planning analyst and use of data analysis tools.
-      </p>
-
-      <div class="skills">
-        <span class="skill-pill">Developer</span>
-        <span class="skill-pill">Data Analysis</span>
-        <span class="skill-pill">Planning</span>
-        <span class="skill-pill">Programming</span>
-      </div>
-
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/laura-nataly-ochoa-castañeda-9942ab356" target="_blank">
-          <i class="bi bi-linkedin"></i> LinkedIn
-        </a>
-        <a href="https://github.com/lNataly8a" target="_blank">
-          <i class="bi bi-github"></i> GitHub
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-      <h2>Welcome!</h2>
-      <p>Full Stack Java Developer | Backend Programming | Planning Analyst | Database Management | Java | JavaScript | Python | PHP | SQL | HTML | CSS | LUA | WMS | SRX | JIRA | Power BI</p>
-    </section>
-
-    <section class="lang-es">
-      <h3>Contacto</h3>
-      <p>Correo: lnatalyochoa8@gmail.com</p>
-      <p>GitHub: <a href="https://github.com/lNataly8a" target="_blank">lNataly8a</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/laura-nataly-ochoa-castañeda-9942ab356" target="_blank">Laura Nataly Ochoa Castañeda</a></p>
-    </section>
-
-    <section class="lang-en">
-      <h3>Contact</h3>
-      <p>Email: lnatalyochoa8@gmail.com</p>
-      <p>GitHub: <a href="https://github.com/lNataly8a" target="_blank">lNataly8a</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/laura-nataly-ochoa-castañeda-9942ab356" target="_blank">Laura Nataly Ochoa Castañeda</a></p>
-    </section>
-  </main>
-
-  <footer>
-    <p class="lang-es">&copy; 2025 Nataly Ochoa. Todos los derechos reservados.</p>
-    <p class="lang-en">&copy; 2025 Nataly Ochoa. All rights reserved.</p>
-  </footer>
-
-  <script src="script.js"></script>
-  </div>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
