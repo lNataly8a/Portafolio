@@ -30,19 +30,32 @@
             </li>
             <li>
               <a href="#profile" class="lang-es">Mi Perfil</a
-              ><a href="#profile" class="lang-en">My Profile</a>
+              ><a href="#profile-en" class="lang-en">My Profile</a>
             </li>
             <li>
               <a href="#projects" class="lang-es">Proyectos</a
-              ><a href="#projects" class="lang-en">Projects</a>
+              ><a href="#projects-en" class="lang-en">Projects</a>
             </li>
             <li>
               <a href="#contact" class="lang-es">Contacto</a
-              ><a href="#contact" class="lang-en">Contact</a>
+              ><a href="#contact-en" class="lang-en">Contact</a>
             </li>
             <li>
-              <a href="cv.html" class="lang-es">CV</a
-              ><a href="cv.html" class="lang-en">CV</a>
+              <a
+                href="./pdf/CV Nataly Ochoa.pdf"
+                download="Nataly-Ochoa-CV.pdf"
+                class="lang-es"
+              >
+                CV <i class="bi bi-download"></i>
+              </a>
+
+              <a
+                href="./pdf/CV Nataly Ochoa.pdf"
+                download="Nataly-Ochoa-CV.pdf"
+                class="lang-en"
+              >
+                CV <i class="bi bi-download"></i>
+              </a>
             </li>
           </ul>
           <div class="lang-toggle">
@@ -62,7 +75,7 @@
         <div class="hero-container">
           <!-- Contenido principal -->
           <div class="hero-left lang-es">
-            <h1>👋 ¡Hola! Soy Laura Nataly Ochoa Castañeda</h1>
+            <h1>¡Hola! Soy Laura Nataly Ochoa Castañeda</h1>
             <br />
             <p class="hero-description">
               Desarrolladora Full Stack Java, con conocimientos en lenguajes de
@@ -97,7 +110,7 @@
           </div>
 
           <div class="hero-left lang-en">
-            <h1>👋 Hi! I'm Laura Nataly Ochoa Castañeda</h1>
+            <h1>Hi! I'm Laura Nataly Ochoa Castañeda</h1>
             <br />
             <p class="hero-description">
               Full-stack Java developer with knowledge of programming languages,
@@ -273,7 +286,7 @@
       </section>
 
       <!-- My profile -->
-      <section id="profile" class="timeline-section lang-en">
+      <section id="profile-en" class="timeline-section lang-en">
         <h3>My Profile</h3>
         <div class="card-grid">
           <div class="card" data-aos="fade-up">
@@ -405,6 +418,7 @@
       </section>
 
       <!-- Proyectos -->
+
       <section id="projects" class="projects-section lang-es">
         <h2 class="section-title">Proyectos</h2>
 
@@ -412,67 +426,183 @@
           <button class="carousel-btn left-btn">&#10094;</button>
 
           <div class="carousel">
-            <!-- Tarjeta 1 -->
+            <!-- ... Tarjeta 1 ... -->
             <div class="project-card">
-              <img src="./img/BlogHollow.png" alt="Proyecto BlogHollowKnight" />
-              <p>
-                Blog para rendir homenaje a un universo tan rico y cautivador,
-                ofreciendo a otros fans un espacio donde puedan explorar,
-                aprender y compartir experiencias sobre el juego. Este blog es
-                un punto de encuentro para quienes deseen profundizar en los
-                misterios y secretos del mundo de Hallownest.
-              </p>
-              <a
-                href="https://pipealf.github.io/BlogHollowKnight"
-                target="_blank"
-                >Ver Deploy</a
-              >
+              <div class="card-inner">
+                <!-- Frente -->
+                <div class="card-front">
+                  <h3>MoodBox8AP</h3>
+                  <img src="./img/MoodBox8AP.jpg" alt="Blog Hollow Knight" />
+                  <button class="flip-btn">Ver más</button>
+                </div>
+
+                <!-- Reverso -->
+                <div class="card-back">
+                  <p>
+                    El proyecto MoodBox 8AP es una iniciativa de venta de
+                    productos de publicidad personalizados (como tazas,
+                    camisetas, cojines y pads), creada en junio de 2025. Su
+                    enfoque principal es apoyar a fandoms, artistas y
+                    comunidades, ofreciendo artículos únicos y un servicio
+                    cercano que busca brindar satisfacción y conexión con cada
+                    cliente.
+                  </p>
+                  <a
+                    href="https://lnataly8a.github.io/MoodBox8AP"
+                    target="_blank"
+                    >Ver Deploy</a
+                  >
+                  <button class="flip-btn">Volver</button>
+                </div>
+              </div>
             </div>
+
             <!-- Tarjeta 2 -->
             <div class="project-card">
-              <img src="./img/ApiNasa.png" alt="Proyecto API Nasa" />
-              <p>
-                Una aplicación web que consume la API pública "Astronomy Picture
-                of the Day" de la NASA para mostrar diariamente una imagen
-                astronómica junto con su título y descripción, permitiendo al
-                usuario explorar contenido visual del universo de forma sencilla
-                y atractiva.
-              </p>
-              <a href="https://lnataly8a.github.io/Lab-API-Nasa" target="_blank"
-                >View Deploy</a
-              >
+              <div class="card-inner">
+                <!-- Frente -->
+                <div class="card-front">
+                  <h3>Blog Hollow Knight</h3>
+                  <img src="./img/BlogHollowN.webp" alt="Blog Hollow Knight" />
+                  <button class="flip-btn">Ver más</button>
+                </div>
+
+                <!-- Reverso -->
+                <div class="card-back">
+                  <p>
+                    Blog para rendir homenaje a un universo tan rico y
+                    cautivador, ofreciendo a otros fans un espacio donde puedan
+                    explorar, aprender y compartir experiencias sobre el juego.
+                    Este blog es un punto de encuentro para quienes deseen
+                    profundizar en los misterios y secretos del mundo de
+                    Hallownest.
+                  </p>
+                  <a
+                    href="https://pipealf.github.io/BlogHollowKnight"
+                    target="_blank"
+                    >Ver Deploy</a
+                  >
+                  <button class="flip-btn">Volver</button>
+                </div>
+              </div>
             </div>
-            <!-- Tarjeta 3 -->
+            <!-- ... tarjeta 3 ... -->
             <div class="project-card">
-              <img src="ruta_imagen3.jpg" alt="Proyecto 3" />
-              <p>Breve descripción del proyecto 3</p>
-              <a href="https://github.com/tuusuario/proyecto3" target="_blank"
-                >Ver Deploy</a
-              >
+              <div class="card-inner">
+                <!-- Frente -->
+                <div class="card-front">
+                  <h3>API NASA</h3>
+                  <img src="./img/ApiNasa.png" alt="Blog Hollow Knight" />
+                  <button class="flip-btn">Ver más</button>
+                </div>
+
+                <!-- Reverso -->
+                <div class="card-back">
+                  <p>
+                    Una aplicación web que consume la API pública "Astronomy
+                    Picture of the Day" de la NASA para mostrar diariamente una
+                    imagen astronómica junto con su título y descripción,
+                    permitiendo al usuario explorar contenido visual del
+                    universo de forma sencilla y atractiva.
+                  </p>
+                  <a
+                    href="https://lnataly8a.github.io/Lab-API-Nasa"
+                    target="_blank"
+                    >Ver Deploy</a
+                  >
+                  <button class="flip-btn">Volver</button>
+                </div>
+              </div>
             </div>
-            <!-- Tarjeta 4 -->
+
+            <!-- ... tarjeta 4 ... -->
             <div class="project-card">
-              <img src="ruta_imagen4.jpg" alt="Proyecto 4" />
-              <p>Breve descripción del proyecto 4</p>
-              <a href="https://github.com/tuusuario/proyecto4" target="_blank"
-                >Ver Deploy</a
-              >
+              <div class="card-inner">
+                <!-- Frente -->
+                <div class="card-front">
+                  <h3>Blog Hollow Knight</h3>
+                  <img src="./img/BlogHollow.png" alt="Blog Hollow Knight" />
+                  <button class="flip-btn">Ver más</button>
+                </div>
+
+                <!-- Reverso -->
+                <div class="card-back">
+                  <p>
+                    Blog para rendir homenaje a un universo tan rico y
+                    cautivador, ofreciendo a otros fans un espacio donde puedan
+                    explorar, aprender y compartir experiencias sobre el juego.
+                    Este blog es un punto de encuentro para quienes deseen
+                    profundizar en los misterios y secretos del mundo de
+                    Hallownest.
+                  </p>
+                  <a
+                    href="https://pipealf.github.io/BlogHollowKnight"
+                    target="_blank"
+                    >Ver Deploy</a
+                  >
+                  <button class="flip-btn">Volver</button>
+                </div>
+              </div>
             </div>
-            <!-- Tarjeta 5 -->
+
+            <!-- ... tarjeta 5 ... -->
             <div class="project-card">
-              <img src="ruta_imagen5.jpg" alt="Proyecto 5" />
-              <p>Breve descripción del proyecto 5</p>
-              <a href="https://github.com/tuusuario/proyecto5" target="_blank"
-                >Ver Deploy</a
-              >
+              <div class="card-inner">
+                <!-- Frente -->
+                <div class="card-front">
+                  <h3>Blog Hollow Knight</h3>
+                  <img src="./img/BlogHollow.png" alt="Blog Hollow Knight" />
+                  <button class="flip-btn">Ver más</button>
+                </div>
+
+                <!-- Reverso -->
+                <div class="card-back">
+                  <p>
+                    Blog para rendir homenaje a un universo tan rico y
+                    cautivador, ofreciendo a otros fans un espacio donde puedan
+                    explorar, aprender y compartir experiencias sobre el juego.
+                    Este blog es un punto de encuentro para quienes deseen
+                    profundizar en los misterios y secretos del mundo de
+                    Hallownest.
+                  </p>
+                  <a
+                    href="https://pipealf.github.io/BlogHollowKnight"
+                    target="_blank"
+                    >Ver Deploy</a
+                  >
+                  <button class="flip-btn">Volver</button>
+                </div>
+              </div>
             </div>
-            <!-- Tarjeta 6 -->
+
+            <!-- ... tarjeta 6 ... -->
             <div class="project-card">
-              <img src="ruta_imagen6.jpg" alt="Proyecto 6" />
-              <p>Breve descripción del proyecto 6</p>
-              <a href="https://github.com/tuusuario/proyecto6" target="_blank"
-                >Ver Deploy</a
-              >
+              <div class="card-inner">
+                <!-- Frente -->
+                <div class="card-front">
+                  <h3>Blog Hollow Knight</h3>
+                  <img src="./img/BlogHollow.png" alt="Blog Hollow Knight" />
+                  <button class="flip-btn">Ver más</button>
+                </div>
+
+                <!-- Reverso -->
+                <div class="card-back">
+                  <p>
+                    Blog para rendir homenaje a un universo tan rico y
+                    cautivador, ofreciendo a otros fans un espacio donde puedan
+                    explorar, aprender y compartir experiencias sobre el juego.
+                    Este blog es un punto de encuentro para quienes deseen
+                    profundizar en los misterios y secretos del mundo de
+                    Hallownest.
+                  </p>
+                  <a
+                    href="https://pipealf.github.io/BlogHollowKnight"
+                    target="_blank"
+                    >Ver Deploy</a
+                  >
+                  <button class="flip-btn">Volver</button>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -481,73 +611,192 @@
       </section>
 
       <!-- Projects -->
-      <section id="projects" class="projects-section lang-en">
-        <h2 class="section-title">Projets</h2>
+
+      <section id="projects-en" class="projects-section lang-en">
+        <h2 class="section-title">Projects</h2>
 
         <div class="carousel-container">
           <button class="carousel-btn left-btn">&#10094;</button>
 
           <div class="carousel">
-            <!-- Tarjeta 1 -->
+            <!-- Card 1 -->
             <div class="project-card">
-              <img src="./img/BlogHollow.png" alt="Proyecto BlogHollowKnight" />
-              <p>
-                A blog to pay tribute to such a rich and captivating universe,
-                offering other fans a space where they can explore, learn, and
-                share experiences about the game. This blog is a meeting place
-                for those who wish to delve deeper into the mysteries and
-                secrets of the world of Hallownest.
-              </p>
-              <a
-                href="https://pipealf.github.io/BlogHollowKnight"
-                target="_blank"
-                >View Deploy</a
-              >
+              <div class="card-inner">
+                <!-- Front -->
+                <div class="card-front">
+                  <h3>MoodBox8AP</h3>
+                  <img src="./img/MoodBox8AP.jpg" alt="MoodBox8AP Project" />
+                  <button class="flip-btn">See more</button>
+                </div>
+
+                <!-- Back -->
+                <div class="card-back">
+                  <p>
+                    The MoodBox 8AP project is an initiative focused on selling
+                    personalized promotional products (such as mugs, t-shirts,
+                    cushions, and mousepads), created in June 2025. Its main
+                    purpose is to support fandoms, artists, and communities by
+                    offering unique items and a close service that seeks to
+                    provide satisfaction and connection with each customer.
+                  </p>
+                  <a
+                    href="https://lnataly8a.github.io/MoodBox8AP"
+                    target="_blank"
+                  >
+                    View Deploy
+                  </a>
+                  <button class="flip-btn">Back</button>
+                </div>
+              </div>
             </div>
-            <!-- Tarjeta 2 -->
+
+            <!-- Card 2 -->
             <div class="project-card">
-              <img src="./img/ApiNasa.png" alt="Proyecto API Nasa" />
-              <p>
-                A web application that consumes NASA's public "Astronomy Picture
-                of the Day" API to display a daily astronomical image along with
-                its title and description, allowing the user to explore visual
-                content of the universe in a simple and engaging way.
-              </p>
-              <a href="https://lnataly8a.github.io/Lab-API-Nasa" target="_blank"
-                >View Deploy</a
-              >
+              <div class="card-inner">
+                <!-- Front -->
+                <div class="card-front">
+                  <h3>Hollow Knight Blog</h3>
+                  <img src="./img/BlogHollowN.webp" alt="Hollow Knight Blog" />
+                  <button class="flip-btn">See more</button>
+                </div>
+
+                <!-- Back -->
+                <div class="card-back">
+                  <p>
+                    A blog dedicated to celebrating such a rich and captivating
+                    universe, offering other fans a space to explore, learn, and
+                    share experiences about the game. This blog is a meeting
+                    point for those who wish to dive deeper into the mysteries
+                    and secrets of Hallownest.
+                  </p>
+                  <a
+                    href="https://pipealf.github.io/BlogHollowKnight"
+                    target="_blank"
+                  >
+                    View Deploy
+                  </a>
+                  <button class="flip-btn">Back</button>
+                </div>
+              </div>
             </div>
-            <!-- Tarjeta 3 -->
+
+            <!-- Card 3 -->
             <div class="project-card">
-              <img src="ruta_imagen3.jpg" alt="Proyecto 3" />
-              <p>Description</p>
-              <a href="https://github.com/tuusuario/proyecto3" target="_blank"
-                >View Deploy</a
-              >
+              <div class="card-inner">
+                <!-- Front -->
+                <div class="card-front">
+                  <h3>NASA API</h3>
+                  <img src="./img/ApiNasa.png" alt="NASA API Project" />
+                  <button class="flip-btn">See more</button>
+                </div>
+
+                <!-- Back -->
+                <div class="card-back">
+                  <p>
+                    A web application that consumes NASA's public API "Astronomy
+                    Picture of the Day" to display a daily astronomy image along
+                    with its title and description, allowing users to explore
+                    the universe's visual content in a simple and engaging way.
+                  </p>
+                  <a
+                    href="https://lnataly8a.github.io/Lab-API-Nasa"
+                    target="_blank"
+                  >
+                    View Deploy
+                  </a>
+                  <button class="flip-btn">Back</button>
+                </div>
+              </div>
             </div>
-            <!-- Tarjeta 4 -->
+
+            <!-- Card 4 -->
             <div class="project-card">
-              <img src="ruta_imagen4.jpg" alt="Proyecto 4" />
-              <p>Description</p>
-              <a href="https://github.com/tuusuario/proyecto4" target="_blank"
-                >View Deploy</a
-              >
+              <div class="card-inner">
+                <!-- Front -->
+                <div class="card-front">
+                  <h3>Hollow Knight Blog</h3>
+                  <img src="./img/BlogHollow.png" alt="Hollow Knight Blog" />
+                  <button class="flip-btn">See more</button>
+                </div>
+
+                <!-- Back -->
+                <div class="card-back">
+                  <p>
+                    A blog dedicated to celebrating such a rich and captivating
+                    universe, offering other fans a space to explore, learn, and
+                    share experiences about the game. This blog is a meeting
+                    point for those who wish to dive deeper into the mysteries
+                    and secrets of Hallownest.
+                  </p>
+                  <a
+                    href="https://pipealf.github.io/BlogHollowKnight"
+                    target="_blank"
+                  >
+                    View Deploy
+                  </a>
+                  <button class="flip-btn">Back</button>
+                </div>
+              </div>
             </div>
-            <!-- Tarjeta 5 -->
+
+            <!-- Card 5 -->
             <div class="project-card">
-              <img src="ruta_imagen5.jpg" alt="Proyecto 5" />
-              <p>Description</p>
-              <a href="https://github.com/tuusuario/proyecto5" target="_blank"
-                >View Deploy</a
-              >
+              <div class="card-inner">
+                <!-- Front -->
+                <div class="card-front">
+                  <h3>Hollow Knight Blog</h3>
+                  <img src="./img/BlogHollow.png" alt="Hollow Knight Blog" />
+                  <button class="flip-btn">See more</button>
+                </div>
+
+                <!-- Back -->
+                <div class="card-back">
+                  <p>
+                    A blog dedicated to celebrating such a rich and captivating
+                    universe, offering other fans a space to explore, learn, and
+                    share experiences about the game. This blog is a meeting
+                    point for those who wish to dive deeper into the mysteries
+                    and secrets of Hallownest.
+                  </p>
+                  <a
+                    href="https://pipealf.github.io/BlogHollowKnight"
+                    target="_blank"
+                  >
+                    View Deploy
+                  </a>
+                  <button class="flip-btn">Back</button>
+                </div>
+              </div>
             </div>
-            <!-- Tarjeta 6 -->
+
+            <!-- Card 6 -->
             <div class="project-card">
-              <img src="ruta_imagen6.jpg" alt="Proyecto 6" />
-              <p>Description</p>
-              <a href="https://github.com/tuusuario/proyecto6" target="_blank"
-                >View Deploy</a
-              >
+              <div class="card-inner">
+                <!-- Front -->
+                <div class="card-front">
+                  <h3>Hollow Knight Blog</h3>
+                  <img src="./img/BlogHollow.png" alt="Hollow Knight Blog" />
+                  <button class="flip-btn">See more</button>
+                </div>
+
+                <!-- Back -->
+                <div class="card-back">
+                  <p>
+                    A blog dedicated to celebrating such a rich and captivating
+                    universe, offering other fans a space to explore, learn, and
+                    share experiences about the game. This blog is a meeting
+                    point for those who wish to dive deeper into the mysteries
+                    and secrets of Hallownest.
+                  </p>
+                  <a
+                    href="https://pipealf.github.io/BlogHollowKnight"
+                    target="_blank"
+                  >
+                    View Deploy
+                  </a>
+                  <button class="flip-btn">Back</button>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -555,38 +804,152 @@
         </div>
       </section>
 
-      <section id="contact" class="lang-es">
-        <h3>Contacto</h3>
-        <p>Correo: lnatalyochoa8@gmail.com</p>
-        <p>
-          GitHub:
-          <a href="https://github.com/lNataly8a" target="_blank">lNataly8a</a>
-        </p>
-        <p>
-          LinkedIn:
-          <a
-            href="https://www.linkedin.com/in/laura-nataly-ochoa-castañeda-9942ab356"
-            target="_blank"
-            >Laura Nataly Ochoa Castañeda</a
-          >
-        </p>
+      <!-- Contacto -->
+
+      <section
+        id="contacto"
+        class="contact-section lang-es"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+        <div class="contact-container">
+          <h2>Contactame</h2>
+          <p class="intro-text">
+            Cuéntame tu idea, tu proyecto o simplemente salúdame. Estoy aquí
+            para escucharte. ✨
+          </p>
+
+          <div class="contact-options">
+            <a href="mailto:lnatalyochoa8@gmail.com" class="contact-btn"
+              ><i class="bi bi-envelope"></i> Email</a
+            >
+            <a
+              href="https://www.linkedin.com/in/laura-nataly-ochoa-castañeda-9942ab356"
+              target="_blank"
+              class="contact-btn"
+              ><i class="bi bi-linkedin"></i> LinkedIn</a
+            >
+            <a
+              href="https://github.com/lNataly8a"
+              target="_blank"
+              class="contact-btn"
+              ><i class="bi bi-github"></i> GitHub</a
+            >
+          </div>
+
+          <form id="contactForm">
+            <h3>¿Prefieres escribirme aquí mismo?</h3>
+            <br />
+            <div class="form-group">
+              <input
+                type="text"
+                id="name"
+                name="user_name"
+                required
+                placeholder="¿Cómo te llamas?"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                id="email"
+                name="user_email"
+                required
+                placeholder="¿Dónde puedo responderte?"
+              />
+            </div>
+            <div class="form-group">
+              <textarea
+                id="message"
+                name="message"
+                required
+                placeholder="Cuéntame qué tienes en mente..."
+              ></textarea>
+            </div>
+            <button type="submit" id="sendBtn" class="send-btn">
+              Enviar mensaje
+            </button>
+          </form>
+
+          <!-- Mensaje de confirmación -->
+          <div id="successMessage" class="success-message">
+            ¡Gracias por escribirme! Te responderé pronto.
+          </div>
+        </div>
       </section>
 
-      <section id="contact" class="lang-en">
-        <h3>Contact</h3>
-        <p>Email: lnatalyochoa8@gmail.com</p>
-        <p>
-          GitHub:
-          <a href="https://github.com/lNataly8a" target="_blank">lNataly8a</a>
-        </p>
-        <p>
-          LinkedIn:
-          <a
-            href="https://www.linkedin.com/in/laura-nataly-ochoa-castañeda-9942ab356"
-            target="_blank"
-            >Laura Nataly Ochoa Castañeda</a
-          >
-        </p>
+      <!-- Contact -->
+
+      <section
+        id="contact-en"
+        class="contact-section lang-en"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+        <div class="contact-container">
+          <h2>Contact Me</h2>
+          <p class="intro-text">
+            Tell me about your idea, your project, or simply say hi. I'm here to
+            listen to you. ✨
+          </p>
+
+          <div class="contact-options">
+            <a href="mailto:lnatalyochoa8@gmail.com" class="contact-btn"
+              ><i class="bi bi-envelope"></i> Email</a
+            >
+            <a
+              href="https://www.linkedin.com/in/laura-nataly-ochoa-castañeda-9942ab356"
+              target="_blank"
+              class="contact-btn"
+              ><i class="bi bi-linkedin"></i> LinkedIn</a
+            >
+            <a
+              href="https://github.com/lNataly8a"
+              target="_blank"
+              class="contact-btn"
+              ><i class="bi bi-github"></i> GitHub</a
+            >
+          </div>
+
+          <form id="contactForm">
+            <h3>Do you prefer writing to me right here?</h3>
+            <br />
+            <div class="form-group">
+              <input
+                type="text"
+                id="name"
+                name="user_name"
+                required
+                placeholder="What's your name?"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                id="email"
+                name="user_email"
+                required
+                placeholder="Where can I reply to you?"
+              />
+            </div>
+            <div class="form-group">
+              <textarea
+                id="message"
+                name="message"
+                required
+                placeholder="Tell me what’s on your mind..."
+              ></textarea>
+            </div>
+            <button type="submit" id="sendBtn" class="send-btn">
+              Send Message
+            </button>
+          </form>
+
+          <!-- Confirmation message -->
+          <div id="successMessage" class="success-message">
+            Thank you for reaching out! I’ll get back to you soon.
+          </div>
+        </div>
       </section>
 
       <footer>
@@ -596,11 +959,17 @@
         <p class="lang-en">&copy; 2025 Nataly Ochoa. All rights reserved.</p>
       </footer>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="script.js"></script>
+
+    <button id="scrollTopBtn" title="Volver arriba">
+      <i class="bi bi-chevron-double-up"></i>
+    </button>
   </body>
 </html>

@@ -25,7 +25,7 @@ body {
     background: linear-gradient(135deg, rgba(26,26,26,0.8), rgba(15,32,39,0.8));
     border-radius: 15px;
     padding: 2rem;
-    max-width: 1500px;
+    max-width: 1300px;
     margin: 5rem auto;
     box-shadow: 0 4px 20px rgba(0,0,0,0.5);
     color: white;
@@ -107,6 +107,7 @@ section {
 }
 
 /* hero section */
+
 .hero-section {
   padding: 4rem 2rem;
   background: transparent;
@@ -652,52 +653,138 @@ section {
   text-align: center;
 }
 
-.projects-section .section-title {
+.section-title {
   font-size: 2rem;
   margin-bottom: 30px;
   font-weight: bold;
 }
 
-/* Contenedor del carrusel */
+/* Carrusel */
 .carousel-container {
   position: relative;
-  width: 100%;
   overflow: hidden;
+  width: 100%;
+  padding: 20px 0;
 }
 
-/* Carrusel con tarjetas */
 .carousel {
   display: flex;
-  transition: transform 0.5s ease-in-out;
-  gap: 20px;
+  transition: transform 0.5s ease;
+  gap: 36px;
+
+}
+
+.project-card {
+  flex: 0 0 360px;
+  height: 520px;
+  perspective: 1000px;
+  position: relative;
 }
 
 /* Tarjetas */
-.project-card {
-  min-width: calc(33.33% - 13.33px); /* 3 tarjetas visibles con gap */
-  background: #2e2e4d;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  padding: 15px;
-  text-align: center;
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 14px 24px rgba(0, 0, 0, 0.35);
 }
 
+/* Imagen como cuadro centrado */
 .project-card img {
+  width: 90%;              /* Aumenta el ancho relativo */
+  max-width: 280px;        /* Límite para pantallas grandes */
+  height: auto;           /* Más alto para mejor presencia */
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 0 auto 20px auto;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease;
+}
+
+/* Contenido */
+
+.card-inner {
+  position: relative;
   width: 100%;
-  border-radius: 8px;
-  height: 300px; /* altura fija para todas las imágenes */
-  object-fit: cover; /* recorta y ajusta la imagen sin deformarla */
+  height: 100%;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
 }
 
-.project-card p {
-  margin: 10px 0;
+.project-card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: #2e2e4d;
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.card-front img {
+  width: 400%;
+  max-width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.card-front h3 {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.card-back p {
+  margin-top: 30px;
   text-align: justify;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
 }
 
-.project-card a {
+.card-back a {
   text-decoration: none;
-  color: #007bff;
+  color: #00c6ff;
   font-weight: bold;
+  border: 1px solid #00c6ff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.card-back a:hover {
+  background: #00c6ff;
+  color: #fff;
+}
+
+.flip-btn {
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.flip-btn:hover {
+  background: rgba(255,255,255,0.2);
 }
 
 /* Botones */
@@ -723,17 +810,205 @@ section {
   right: 10px;
 }
 
+.carousel-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Animación */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 /* Responsive */
 @media (max-width: 992px) {
   .project-card {
-    min-width: calc(50% - 10px);
+    flex: 0 0 calc(50% - 10px);
   }
 }
 
 @media (max-width: 600px) {
   .project-card {
-    min-width: 100%;
+    flex: 0 0 100%;
   }
+}
+
+/* Contacto */
+
+/* Animaciones base */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  60% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+/* Sección contacto */
+
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  color: white;
+  background: linear-gradient(135deg, #0077b6, #00b4d8);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  margin: 0 5px 30px;
+}
+
+.contact-btn:hover {
+  background: #7a74f5;
+  transform: scale(1.08);
+  box-shadow: 0 0 15px rgba(64, 1, 238, 0.5);
+}
+
+.contact-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 5px 20px rgba(0, 123, 255, 0.3);
+  background: linear-gradient(135deg, #00b4d8, #48cae4);
+}
+
+.contact-btn:active {
+  transform: scale(0.95);
+}
+/* Responsive */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 1.5rem;
+  }
+
+  .contact-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .contact-section p {
+    font-size: 1rem;
+  }
+
+  .contact-btn {
+    flex: 1 1 40%; /* 2 botones por fila */
+    padding: 1rem;
+  }
+
+  .contact-form-container {
+    padding: 1.2rem;
+  }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+  .contact-options {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .contact-btn {
+    flex: 1 1 100%; /* 1 botón por fila */
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .contact-form-container {
+    padding: 1rem;
+  }
+
+  .contact-form button {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+}
+
+/* 🔹 Estilos de la sección */
+.contact-section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #2e2e4d;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.contact-container h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.intro-text {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  color: white;
+}
+
+/* 🔹 Campos */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 0.8rem;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: #007bff;
+}
+
+/* 🔹 Botón */
+.send-btn {
+  background: linear-gradient(90deg, #007bff, #00d4ff);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.send-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 20px rgba(0, 123, 255, 0.3);
+}
+
+/* 🔹 Confirmación */
+.success-message {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: 0.8rem;
+  background: #e6ffed;
+  color: #2f855a;
+  font-weight: bold;
+  display: none; /* oculto por defecto */
 }
 
   /* Footer */
@@ -744,4 +1019,52 @@ footer {
   padding: 1rem 0;
   color: #fff; /* si el fondo es oscuro */
   font-size: 0.9rem;
+}
+
+/* Boton arriba */
+
+#scrollTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: linear-gradient(135deg, #2f93ff, #1662b4);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  font-size: 24px;
+  cursor: pointer;
+  display: none; /* Oculto por defecto */
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 15px rgba(2, 4, 119, 0.25); /* sombra difuminada */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s;
+  opacity: 0;
+}
+
+/* Cuando aparece */
+#scrollTopBtn.show {
+  display: flex;
+  opacity: 1;
+  animation: fadeInUp 0.4s ease-out;
+}
+
+/* Hover con efecto */
+#scrollTopBtn:hover {
+  transform: scale(1.15) translateY(-3px);
+  box-shadow: 0 10px 20px rgba(5, 19, 100, 0.35);
+}
+
+/* Animación de entrada */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

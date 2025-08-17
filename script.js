@@ -87,30 +87,114 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", revealOnScroll);
 });
 
-// JavaScript para carrusel
-const carousel = document.querySelector('.carousel');
-const leftBtn = document.querySelector('.left-btn');
-const rightBtn = document.querySelector('.right-btn');
+/* Carruseles */
+document.querySelectorAll('.carousel-container').forEach((container) => {
+  const carousel = container.querySelector('.carousel');
+  const leftBtn = container.querySelector('.left-btn');
+  const rightBtn = container.querySelector('.right-btn');
 
-let scrollIndex = 0;
-const cardsToShow = 3;
-const totalCards = document.querySelectorAll('.project-card').length;
+  let scrollIndex = 0;
 
-rightBtn.addEventListener('click', () => {
-  if (scrollIndex < totalCards - cardsToShow) {
-    scrollIndex++;
-    updateCarousel();
+  function getCardWidth() {
+    const card = container.querySelector('.project-card');
+    const gap = 20; // ajusta si tu CSS usa otro gap
+    return card ? card.offsetWidth + gap : 0;
   }
+
+  function getMaxScrollIndex() {
+    const containerWidth = container.offsetWidth;
+    const totalWidth = carousel.scrollWidth;
+    const cardWidth = getCardWidth();
+
+    return Math.max(
+      Math.floor((totalWidth - containerWidth) / cardWidth),
+      0
+    );
+  }
+
+  function updateCarousel() {
+    const cardWidth = getCardWidth();
+    const maxScroll = getMaxScrollIndex();
+
+    scrollIndex = Math.min(scrollIndex, maxScroll);
+    carousel.style.transform = `translateX(-${scrollIndex * cardWidth}px)`;
+
+    leftBtn.disabled = scrollIndex === 0;
+    rightBtn.disabled = scrollIndex >= maxScroll;
+  }
+
+  rightBtn.addEventListener('click', () => {
+    const maxScroll = getMaxScrollIndex();
+    if (scrollIndex < maxScroll) {
+      scrollIndex++;
+      updateCarousel();
+    }
+  });
+
+  leftBtn.addEventListener('click', () => {
+    if (scrollIndex > 0) {
+      scrollIndex--;
+      updateCarousel();
+    }
+  });
+
+  window.addEventListener('resize', updateCarousel);
+  updateCarousel();
 });
 
-leftBtn.addEventListener('click', () => {
-  if (scrollIndex > 0) {
-    scrollIndex--;
-    updateCarousel();
-  }
+/* card flip */ 
+document.querySelectorAll('.project-card').forEach(card => {
+  const flipButtons = card.querySelectorAll('.flip-btn');
+  flipButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      card.classList.toggle('flipped');
+    });
+  });
 });
 
-function updateCarousel() {
-  const cardWidth = document.querySelector('.project-card').offsetWidth + 20; // gap
-  carousel.style.transform = `translateX(-${scrollIndex * cardWidth}px)`;
-}
+/* Interacción Formulario */
+
+ (function() {
+      // ⚠️ Usa tu PUBLIC KEY
+      emailjs.init({ publicKey: "yD5u3lncGo8QqqWEC" });
+    })();
+
+    const form = document.getElementById("contactForm");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault(); // ✅ evita recargar
+
+      emailjs.sendForm(
+        "scyu tqjs ztjs texm",   // tu Service ID
+        "template_y1uxxhq",   // tu Template ID
+        form
+      )
+      .then(() => {
+        document.getElementById("successMessage").style.display = "block";
+        form.reset();
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        alert("❌ Error al enviar: " + JSON.stringify(error));
+      });
+    });
+
+    // Botón scroll hacia arriba
+document.addEventListener("DOMContentLoaded", () => {
+  const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollTopBtn.classList.add("show"); // aparece con animación
+    } else {
+      scrollTopBtn.classList.remove("show"); // desaparece
+    }
+  });
+
+  scrollTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+});
