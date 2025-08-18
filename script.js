@@ -97,20 +97,20 @@ document.querySelectorAll('.carousel-container').forEach((container) => {
 
   function getCardWidth() {
     const card = container.querySelector('.project-card');
-    const gap = 20; // ajusta si tu CSS usa otro gap
+    const gap = 36; // ajusta si tu CSS usa otro gap
     return card ? card.offsetWidth + gap : 0;
   }
 
-  function getMaxScrollIndex() {
-    const containerWidth = container.offsetWidth;
-    const totalWidth = carousel.scrollWidth;
-    const cardWidth = getCardWidth();
+ function getMaxScrollIndex() {
+  const containerWidth = container.offsetWidth;
+  const totalWidth = carousel.scrollWidth;
+  const cardWidth = getCardWidth();
 
-    return Math.max(
-      Math.floor((totalWidth - containerWidth) / cardWidth),
-      0
-    );
-  }
+  return Math.max(
+    Math.ceil((totalWidth - containerWidth) / cardWidth),
+    0
+  );
+}
 
   function updateCarousel() {
     const cardWidth = getCardWidth();
